@@ -1,15 +1,18 @@
 #include <iostream>
 #include <string>
+#include <stdlib.h>
+#include <time.h>
 int game(int i, int j, char a, char b);
-int util(int k);
+std::string util();
 
 int main(){
+    srand((unsigned)time(NULL));
     std::string ans = "";
     std::string guess = "";
     int strike = 0, ball = 0;
     
-    std::cout << "Enter a answer: ";
-    std::cin >> ans;
+    ans = util();
+    std::cout << "Answer is " << ans << '\n';
     while(1){
         std::cout << "Enter a guess: ";
         std::cin >> guess;
