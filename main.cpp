@@ -12,7 +12,6 @@ int main(){
     int strike = 0, ball = 0;
     
     ans = util();
-    std::cout << "Answer is " << ans << '\n';
     while(1){
         std::cout << "Enter a guess: ";
         std::cin >> guess;
