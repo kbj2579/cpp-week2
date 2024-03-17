@@ -9,10 +9,12 @@ int main(){
     srand((unsigned)time(NULL));
     std::string ans = "";
     std::string guess = "";
-    int strike = 0, ball = 0;
+    int strike = 0, ball = 0, cnt = 5;
     
     ans = util();
-    while(1){
+    while(cnt){
+        std::cout << cnt << " chances left." << '\n';
+        cnt--;
         std::cout << "Enter a guess: ";
         std::cin >> guess;
         strike = 0;
@@ -34,6 +36,9 @@ int main(){
         }
         std::cout << "Strikes: " << strike;
         std::cout << ", Balls: " << ball << '\n';
+        if(cnt == 0){
+            std::cout << "You lose!";
+        }
     }
     
 }
